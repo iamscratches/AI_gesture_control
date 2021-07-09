@@ -47,8 +47,8 @@ class FaceDetector:
         return img
 
 def main():
-    # cap = cv2.VideoCapture("../videos/video11.mp4")
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("../videos/video11.mp4")
+    # cap = cv2.VideoCapture(0)
 
     success, img = cap.read()
     pTime = 0
