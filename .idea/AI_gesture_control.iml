@@ -5,4 +5,11 @@
     <orderEntry type="jdk" jdkName="Python 3.6 (computer_vision) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PyNamespacePackagesService">
+    <option name="namespacePackageFolders">
+      <list>
+        <option value="$MODULE_DIR$/Controllers" />
+      </list>
+    </option>
+  </component>
 </module>
