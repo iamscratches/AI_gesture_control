@@ -8,13 +8,6 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
-'''
-###########################
-        CONTROLS
-thumb, index and pinky finger up other fingers down - volume control, move thumb and index closer and apart to change volume
-###########################
-'''
-
 ####################################
 wCam, hCam = 640, 480
 ####################################
@@ -41,10 +34,8 @@ while True:
     success, img = cap.read()
     img = detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
-    if len(lmList) > 0:
-        fingerStatus = detector.fingersUp()
 
-    if len(lmList)>0 and fingerStatus[2] == 0 and fingerStatus[3] == 0 and fingerStatus[4]:
+    if len(lmList)>16 and lmList[11][2]>lmList[10][2] and lmList[15][2]>lmList[14][2] and lmList[18][2]>lmList[20][2]:
         # print(lmList[4], lmList[8])
         x1, y1 = lmList[4][1], lmList[4][2]
         x2, y2 = lmList[8][1], lmList[8][2]
